@@ -34,7 +34,7 @@ function CandleCostCalculator() {
     <div style={{ 
       maxWidth: 900,
       margin: '20px auto',
-      padding: 24,
+      padding: '24px 16px',
       border: '1px solid #ddd',
       borderRadius: 16,
       background: `linear-gradient(rgba(248, 250, 252, 0.95), rgba(224, 231, 239, 0.95)), url('https://images.unsplash.com/photo-1603207213991-47bbcd0a8cc5?auto=format&fit=crop&w=800&q=80')`,
@@ -42,8 +42,8 @@ function CandleCostCalculator() {
       backgroundPosition: 'center',
       boxShadow: '0 4px 24px rgba(0,0,0,0.07)',
       display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: '32px',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+      gap: '24px',
       alignItems: 'start'
     }}>
       <div style={{ background: 'rgba(255, 255, 255, 0.7)', padding: '20px', borderRadius: '12px' }}>
@@ -101,21 +101,24 @@ function CandleCostCalculator() {
 
       <div style={{ 
         display: 'flex', 
-        alignItems: 'center', 
+        alignItems: 'flex-start', 
         justifyContent: 'center', 
         height: '100%',
-        minHeight: '400px'
+        minHeight: '300px',
+        position: 'sticky',
+        top: '20px'
       }}>
         {result !== null ? (
           <div style={{ 
             fontWeight: 'bold',
             color: '#222',
-            fontSize: 18,
+            fontSize: 16,
             textAlign: 'center',
             background: 'rgba(230, 255, 250, 0.9)',
             borderRadius: 12,
-            padding: 24,
+            padding: '20px 16px',
             width: '100%',
+            maxWidth: '400px',
             boxShadow: '0 4px 16px rgba(72,187,120,0.12)',
             border: '2px solid #4fd1c5'
           }}>
